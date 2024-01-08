@@ -1,35 +1,37 @@
-# Maltego transformation example
+# Emailrep transform for Maltego
 
-## Development
+A free transform to get reputation of email address in a second.
 
-See the [official Maltego documentation](https://docs.maltego.com/support/solutions/articles/15000017605-writing-local-transforms-in-python#create-a-project-folder-0-0). 
+# Installation
 
-## Installation example
+## Create transforms (manually)
 
-1. Ensure you have Python3 and pip installed.
+Configure each file in transforms folder like this:
 
-2. `pip3 install -r requirements.txt`
+1. Press "New Local Transforms..." button
 
-3. Open Maltego (CE will be enough)
+<img width="453" alt="Step 1" src="https://github.com/soxoj/interpol-notices-maltego/assets/31013580/72047edc-a666-4aa2-8cee-9a49fd643066">
 
-4. Click "New local transform..." button
+2. Fill in the fields in the first window
 
-![image](https://s3-eu-central-1.amazonaws.com/euc-cdn.freshdesk.com/data/helpdesk/attachments/production/15008885846/original/4iNHwg0zGFGfKM3BHHG2xyGcOqSqPA4gDg.png?1542716349)
+<img width="860" alt="Step 2" src="https://github.com/soxoj/interpol-notices-maltego/assets/31013580/4cbc8be1-7b12-4dc3-bdcf-901d7816abd1">
 
-5. Fill in the fields in the first window (example below), press Next
+3. Fill in the fields in the second window
 
-![image](https://user-images.githubusercontent.com/31013580/145275341-0af933d0-d904-4d78-b767-9cdec17874d9.png)
+<img width="860" alt="Step 3" src="https://github.com/soxoj/interpol-notices-maltego/assets/31013580/1377825c-e63b-40ff-b8dd-031dc0752769">
 
-6. Fill in the fields in the second window (example below), press Finish
+It's not necessary but for correсt display of entities I recommend to install SocialLinks Pro entities from the Maltego Hub, that's free.
 
-![image](https://user-images.githubusercontent.com/31013580/145275517-7b8480a2-a197-4886-be4d-9283a9e27674.png)
+## API key
 
-## Usage example
+Put your API key in transforms/EmailRepCheck.py file.
 
-1. Create an Alias with desired username and choose transformation
+```python
+API_KEY = "YOU-KEY-HERE"
+```
 
-![image](https://user-images.githubusercontent.com/31013580/145275774-77ebe2e3-8956-4071-838e-d23869482069.png)
+# Usage
 
-2. That's all!
+emailrep.io has a quite low limit without API key. You can request a [free API key](https://emailrep.io/key) (10 requests per day, 250 per month) or buy Commercial / Enterprise access.
 
-![image](https://user-images.githubusercontent.com/31013580/145275886-27f8d7ed-86a8-44fe-a700-74dc69de31c5.png)
+Create Email entity and launch the transform!
